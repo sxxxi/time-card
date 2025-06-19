@@ -15,8 +15,13 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 
 const routes = [
   {
-    path: "/",
+    path: "/dashboard",
     component: lazy(() => import("./routes/Home")),
+    children: [],
+  },
+  {
+    path: "/time-card",
+    component: lazy(() => import("./routes/TimeCard")),
     children: [],
   },
   {
