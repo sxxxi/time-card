@@ -3,7 +3,7 @@ import { JSX } from "solid-js";
 
 export default function SidebarNav() {
   return (
-    <nav class="bg-slate-100 text-slate-950 h-svh w-96 p-4">
+    <nav class="bg-background text-foreground border-l border-l-muted h-svh w-96 p-4 shadow-md">
       <SidebarHeader />
 
       <div class="flex flex-col mt-4">
@@ -16,7 +16,7 @@ export default function SidebarNav() {
 
 function SidebarHeader() {
   return (
-    <div class="border border-slate-300 text-slate-800 rounded-sm p-4">
+    <div class="border border-muted text-slate-800 rounded-sm p-4">
       Hello
     </div>
   );
@@ -30,7 +30,7 @@ export function NavButton(props: NavButtonProps) {
   return (
     <A
       class="p-2 rounded-sm transition-colors ease-in-out"
-      activeClass="bg-slate-800 text-slate-50"
+      activeClass="bg-primary text-primary-fg"
       {...(props as AnchorProps)}
     >
       {props.children}

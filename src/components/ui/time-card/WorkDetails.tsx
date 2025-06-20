@@ -10,13 +10,15 @@ export function WorkDetails() {
   };
 
   return (
-    <For each={data.workDetails}>
-      {(detail, index) => (
-        <WorkDetail
-          data={detail}
-          onDescriptionChange={handleDescriptionChange(index())}
-        />
-      )}
-    </For>
+    <div class="border border-muted rounded-sm p-4 w-fit">
+      <For each={data.workDetails}>
+        {(detail, index) => (
+          <WorkDetail
+            data={detail}
+            onDescriptionChange={handleDescriptionChange(index())}
+          />
+        )}
+      </For>
+    </div>
   );
 }

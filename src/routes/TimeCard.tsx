@@ -5,8 +5,10 @@ import { TimeCardDataProvider } from "../contexts/TimeCardDataContext";
 export default function TimeCard() {
   return (
     <TimeCardDataProvider>
-      <h1 class="text-5xl font-bold">勤怠入力</h1>
-      <TimeCardForm />
+      <div class="m-8">
+        <h1 class="text-5xl font-bold">勤怠入力</h1>
+        <TimeCardForm />
+      </div>
     </TimeCardDataProvider>
   );
 }

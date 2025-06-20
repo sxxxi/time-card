@@ -12,14 +12,16 @@ interface TimeCardDataProviderProps {
 }
 
 export function TimeCardDataProvider(props: TimeCardDataProviderProps) {
-  const foo = createStore<TimeCardData>({
-    date: "this is the date",
+  const ctx = createStore<TimeCardData>({
+    date: (new Date()).toLocaleDateString('en-CA'),
+    startTime: "09:00",
+    endTime: "18:00",
     workDetails: [{ description: "Hello?" }],
     summary: "this is the summary",
   });
 
   return (
-    <TimeCardDataContext.Provider value={foo}>
+    <TimeCardDataContext.Provider value={ctx}>
       {props.children}
     </TimeCardDataContext.Provider>
   );
